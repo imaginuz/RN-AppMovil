@@ -77,3 +77,12 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+# Screenshots
+
+Below are some example screenshots of the app:
+
+<p align="center">
+  <img src="./examples/sc_example1.jpg" alt="Screenshot 1" width="45%" />
+  <img src="./examples/sc_example2.jpg" alt="Screenshot 2" width="44.2%" />
+</p>
