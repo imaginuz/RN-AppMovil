@@ -1,0 +1,201 @@
+[
+    {
+      "period": "I",
+      "courses": [
+        {
+          "code": "CSL1-FI101",
+          "name": "Filosofía",
+          "status": "APROBADO",
+          "grade": 99
+        },
+        {
+          "code": "ESG1-ES101",
+          "name": "Español",
+          "status": "APROBADO",
+          "grade": 96
+        },
+        {
+          "code": "ESG1-MT101",
+          "name": "Matemáticas",
+          "status": "APROBADO",
+          "grade": 92
+        },
+        {
+          "code": "ESG1-SC101",
+          "name": "Sociología",
+          "status": "APROBADO",
+          "grade": 93
+        },
+        {
+          "code": "INF1-IF112",
+          "name": "Introducción a las Ciencias de la Computación",
+          "status": "APROBADO",
+          "grade": 90
+        }
+      ]
+    },
+    {
+      "period": "II",
+      "courses": [
+        {
+          "code": "CSL1-ESPF1",
+          "name": "Retiro de Padres de Familia",
+          "status": "APROBADO",
+          "grade": 95
+        },
+        {
+          "code": "CSL1-CR201",
+          "name": "El Hombre Frente a la Vida",
+          "status": "APROBADO",
+          "grade": 98
+        },
+        {
+            "code": "ESG1-ES201",
+            "name": "Expresion Oral Y Escrita",
+            "status": "APROBADO",
+            "grade": 99
+        },
+        {
+            "code": "ESG1-HS101",
+            "name": "Historia De Honduras",
+            "status": "APROBADO",
+            "grade": 99
+        },
+        {
+          "code": "ESG1-MT201",
+          "name": "Pre-Cálculo",
+          "status": "APROBADO",
+          "grade": 87
+        },
+        {
+          "code": "INF1-FI200",
+          "name": "Fundamentos y Lógica de Programación",
+          "status": "APROBADO",
+          "grade": 88
+        }
+      ]
+    },
+    {
+        "period": "III",
+        "courses": [
+            {
+                "code": "ESG1-MT202",
+                "name": "Estadistica I",
+                "status": "APROBADO",
+                "grade": 75
+            },
+            {
+                "code": "ESG1-MT303",
+                "name": "Calculo I",
+                "status": "APROBADO",
+                "grade": 83
+            },
+            {
+                "code": "INF1-IF213",
+                "name": "Estructuras Discretas",
+                "status": "APROBADO",
+                "grade": 82
+            },
+            {
+                "code": "INF1-IF214",
+                "name": "Programacion Estructurada I",
+                "status": "APROBADO",
+                "grade": 84
+            }
+        ]
+    },
+    {
+        "period": "IV",
+        "courses": [
+            {
+                "code": "ADM1-AD101",
+                "name": "Administracion I",
+                "status": "APROBADO",
+                "grade": 87
+            },
+            {
+                "code": "ADM1-AD302",
+                "name": "Metodos y Tecnicas de Investigacion",
+                "status": "APROBADO",
+                "grade": 83
+            },
+            {
+                "code": "ESG1-MT401",
+                "name": "Calculo II",
+                "status": "APROBADO",
+                "grade": 82
+            },
+            {
+                "code": "IND1-CNFS1",
+                "name": "Laboratorio de Fisica I",
+                "status": "APROBADO",
+                "grade": 84
+            },
+            {
+                "code": "IND1-FS201",
+                "name": "Fisica I",
+                "status": "APROBADO",
+                "grade": 84
+            },
+            {
+                "code": "INF1-IF303",
+                "name": "Programacion Estructurada II",
+                "status": "APROBADO",
+                "grade": 84
+            }
+        ]
+    },
+    {
+        "period": "V",
+        "courses": [
+            {
+                "code": "FNZ1-MT204",
+                "name": "Matematicas Financiera",
+                "status": "APROBADO",
+                "grade": 95
+            },
+            {
+                "code": "INF1-IF319",
+                "name": "Principios De Electronica",
+                "status": "APROBADO",
+                "grade": 100
+            },
+            {
+                "code": "INF1-IF325",
+                "name": "Programacion En Entornos de Desarrollo Visual",
+                "status": "APROBADO",
+                "grade": 100
+            }
+        ]
+    },
+    {
+        "period": "VI",
+        "courses" : [
+            {
+                "code": "CSL1-FI501",
+                "name": "Etica Profesional",
+                "status": "APROBADO",
+                "grade": "100"
+            },
+            {
+                "code": "INF1-IF323",
+                "name": "Redes I",
+                "status": "APROBADO",
+                "grade": 100
+            },
+            {
+                "code": "INF1-IF324",
+                "name": "Circuitos Logicos",
+                "status": "APROBADO",
+                "grade": 100
+            },
+            {
+                "code": "INF1-IF327",
+                "name": "Bases De Datos I",
+                "status": "APROBADO",
+                "grade": 100
+            }
+        ]
+    }
+  ]
+  
