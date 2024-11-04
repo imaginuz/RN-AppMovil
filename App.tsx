@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -16,6 +16,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
+import coursesData from './src/data/data.json'; // JSON data Clases
 
 import {
   Colors,
@@ -29,32 +31,6 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -63,56 +39,93 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={[styles.container, backgroundStyle]}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+      {/* Header */}
+      <View style={styles.headerContainer}>
+        <Text style={styles.headerText}>Ingeniería En Ciencias De La Computación</Text>
+      </View>
+      <ScrollView style={styles.scrollView}>
+        {coursesData.map((periodData, index) => (
+          <View key={index} style={styles.periodContainer}>
+            <Text style={styles.periodTitle}>Periodo {periodData.period}</Text>
+            {periodData.courses.map((course, idx) => (
+              <View key={idx} style={styles.card}>
+                <Text style={styles.courseCode}>{course.code}</Text>
+                <Text style={styles.courseName}>{course.name}</Text>
+                <Text style={styles.courseStatus}>
+                  {course.status}: {course.grade}%
+                </Text>
+              </View>
+            ))}
+          </View>
+        ))}
       </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  headerContainer: {
+    padding: 20,
+    backgroundColor: '#6200ee',
+    alignItems: 'center',
+    borderRadius: 12,
+    marginBottom: 20,
   },
-  sectionTitle: {
+  headerText: {
     fontSize: 24,
+    fontWeight: 'bold',
+    color: '#ffffff',
+  },
+  container: {
+    flex: 1,
+    padding: 10,
+  },
+  scrollView: {
+    flex: 1,
+  },
+  periodContainer: {
+    marginBottom: 20,
+    borderTopWidth: 1,
+    borderTopColor: '#cccccc',
+    paddingTop: 10,
+  },
+  periodTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  card: {
+    backgroundColor: '#fff',
+    padding: 15,
+    borderRadius: 8,
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  courseCode: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#555555',
+  },
+  courseName: {
+    fontSize: 16,
     fontWeight: '600',
+    marginBottom: 5,
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  courseStatus: {
+    fontSize: 14,
+    color: 'green',
   },
 });
+
 
 export default App;
