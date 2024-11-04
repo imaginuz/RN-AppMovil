@@ -5,8 +5,9 @@
  * @format
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import type { PropsWithChildren } from 'react';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -18,11 +19,8 @@ import {
   Switch,
 } from 'react-native';
 
-import 
-  coursesData from './src/data/data.json'; // JSON data Clases
-
-import 
-  { Colors } from 'react-native/Libraries/NewAppScreen';
+import coursesData from './src/data/data.json'; // JSON DATA
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -51,6 +49,8 @@ function App(): React.JSX.Element {
           trackColor={{ false: "#767577", true: "#81b0ff" }}
         />
       </View>
+
+      {/* Courses */}
       <ScrollView style={styles.scrollView}>
         {coursesData.map((periodData, index) => (
           <View key={index} style={styles.periodContainer}>
@@ -69,10 +69,12 @@ function App(): React.JSX.Element {
           </View>
         ))}
       </ScrollView>
+
     </SafeAreaView>
   );
 }
 
+{/* Styles */ }
 const styles = StyleSheet.create({
   headerContainer: {
     padding: 20,
@@ -131,5 +133,5 @@ const styles = StyleSheet.create({
   }
 });
 
-
+{/* Export */ }
 export default App;
